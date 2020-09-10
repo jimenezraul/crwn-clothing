@@ -7,7 +7,7 @@ import { auth } from '../../firebase/firebase.utils';
 import './header.styles.scss';
 
 
-const Header = ({ currentUser, photo}) => (
+const Header = ({ currentUser, user}) => (
     <div className='header'>
         <Link className='logo-container' to="/">
             <Logo className='logo'></Logo>
@@ -28,9 +28,12 @@ const Header = ({ currentUser, photo}) => (
             }
             {
                 currentUser ?
-                    <img className='profile-pic' src={photo}></img>
+                    <div className='profile-option'>
+                        <img className='profile-pic' src={user.photoURL} />
+                    </div>
+                    
                     :
-                    <img></img>
+                    <img />
             }
             
         </div>
