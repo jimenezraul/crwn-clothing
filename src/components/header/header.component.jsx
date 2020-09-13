@@ -27,13 +27,17 @@ const Header = ({ currentUser, user}) => (
                     <Link className='option' to='/signin'>SIGN IN</Link>
             }
             {
-                currentUser ?
+                currentUser?
+                user.photoURL ?
                     <div className='profile-option'>
                         <img className='profile-pic' src={user.photoURL} />
                     </div>
                     
                     :
-                    <img />
+                        <img />
+                    
+                    :
+                    null
             }
             
         </div>
