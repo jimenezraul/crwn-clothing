@@ -31,18 +31,8 @@ const Header = ({ currentUser }) => (
         <Link className="option" to="/signin">
           SIGN IN
         </Link>
-      )}
-      {currentUser ? (
-        currentUser.photoURL ? (
-                    <div className="profile-option">
-                        <CartIcon />
-                        <img className="profile-pic" src={currentUser.photoURL} />
-                        
-          </div>
-        ) : (
-          <img />
-        )
-      ) : null}
+        )}
+        <CartIcon />
         </div>
         <CartDropdown />
   </div>
